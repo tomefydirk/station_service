@@ -53,7 +53,7 @@ public class ButtonSave extends JButton{
             val+=init_field("Entrée",input.get("Entrée"));
             val+=init_field("Sortie",input.get("Sortie"));
             val+=init_field("Cuve",input.get("Cuve"));
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter("/home/tomefy/Documents/prog/java/chess/save/"+path.getText()+".txt"))) {
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter("/home/tomefy/Documents/prog/java/station_service/save/"+path.getText()+".txt"))) {
             writer.append(val);
             } catch (IOException e) {
             System.err.println("Erreur lors de la sauvegarde du fichier : " + e.getMessage());

@@ -1,10 +1,11 @@
 package aff;
 
-import javax.swing.JButton;
+
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import aff_button.ButtonSave;
 
 import java.awt.*;
 import java.util.HashMap;
@@ -14,6 +15,7 @@ public class Formulaire extends JPanel{
         JTextField sortie;
         JTextField cuve;
 
+        JTextField save_line;
         /*------panel------*/
         JPanel A;
         JPanel B;
@@ -51,7 +53,9 @@ public class Formulaire extends JPanel{
                 make_text_field("Cuve", cuve);
         }
         void init_bouton(){
-                B.add(new JButton("Save"));
+                JTextField a=new JTextField("default_save",10);
+                B.add(a);
+                B.add(new ButtonSave(field_into_string(), a));
         }   
         HashMap <String,String> field_into_string(){
                 HashMap<String,String>  retour=new HashMap<>();  
