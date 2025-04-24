@@ -65,6 +65,11 @@ public class FLoader {
 
                 }
          }
+         public static void debug(String[] a){
+            for(int j=0;j<a.length;j++){
+                System.out.println(a[j]);
+            }
+         }
          public static String[][] get_all_data(String input){
                 int limit=count_data(input);
                 String[][] donnee=new String[limit][];
@@ -72,7 +77,16 @@ public class FLoader {
                 for(int i=0;i<limit;i++){
                    donnee[i]=get_row(a[i]);
                 }
+               // FLoader.debug(donnee);
                 return donnee;
          }
-    
+         public static void main(String[] args){
+            System.out.println("\n");
+            String [][] a=get_all_data("Date :blabla;\n" + //
+                                "Entrée :0;\n" + //
+                                "Sortie :0;\n" + //
+                                "Cuve :1;\n" + //
+                                "break;\n" + //
+                                "");
+         }
 }
