@@ -1,5 +1,7 @@
 package aff;
 
-public class TableDate {
+import javax.swing.JPanel;
+
+public class TableDate extends JPanel{
     
 }

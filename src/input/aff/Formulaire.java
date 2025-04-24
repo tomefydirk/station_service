@@ -2,6 +2,6 @@ package aff;
 
 import javax.swing.JPanel;
 
-public class Table extends JPanel{
+public class Formulaire extends JPanel{
     
 }
