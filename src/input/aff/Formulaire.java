@@ -4,9 +4,12 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+
+
 import java.awt.*;
+import java.util.HashMap;
 public class Formulaire extends JPanel{
-        JTextField Date;
+        JTextField date;
         JTextField entree;
         JTextField sortie;
         JTextField cuve;
@@ -34,14 +37,14 @@ public class Formulaire extends JPanel{
         }    
         void init_text_field(){
                 A.setLayout(new GridLayout(4,0));
-                Date=new JTextField(10);
-                make_text_field("Date", Date);
+                date=new JTextField(10);
+                make_text_field("Date", date);
 
 
-                entree=new JTextField(10);
+                entree=new JTextField("0",10);
                 make_text_field("Entrée", entree);
 
-                sortie=new JTextField(10);
+                sortie=new JTextField("0",10);
                 make_text_field("Sortie", sortie);
 
                 cuve=new JTextField(10);
@@ -50,6 +53,14 @@ public class Formulaire extends JPanel{
         void init_bouton(){
                 B.add(new JButton("Save"));
         }   
+        HashMap <String,String> field_into_string(){
+                HashMap<String,String>  retour=new HashMap<>();  
+                retour.put("Date",date.getText());
+                retour.put("Entrée",entree.getText());
+                retour.put("Sortie",sortie.getText());
+                retour.put("Cuve", cuve.getText());
+                return retour;
+        }
         public Formulaire(){
                    super(); 
                  

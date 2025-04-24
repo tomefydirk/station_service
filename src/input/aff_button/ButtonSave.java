@@ -3,6 +3,7 @@ package aff_button;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashMap;
 import java.awt.FlowLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -44,14 +45,14 @@ public class ButtonSave extends JButton{
     void add_break(){
         val+="break;\n\n";
     }
-    public ButtonSave(String[] input,JTextField path){
+    public ButtonSave(HashMap<String,String> input,JTextField path){
         super("Save 💾");
         addActionListener(_->{
             val="";
-            val+=init_field("Date",input[0]);
-            val+=init_field("Entrée",input[1]);
-            val+=init_field("Sortie",input[2]);
-            val+=init_field("Cuve",input[4]);
+            val+=init_field("Date",input.get("Date"));
+            val+=init_field("Entrée",input.get("Entrée"));
+            val+=init_field("Sortie",input.get("Sortie"));
+            val+=init_field("Cuve",input.get("Cuve"));
             try (BufferedWriter writer = new BufferedWriter(new FileWriter("/home/tomefy/Documents/prog/java/chess/save/"+path.getText()+".txt"))) {
             writer.append(val);
             } catch (IOException e) {

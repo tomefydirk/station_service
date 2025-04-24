@@ -27,5 +27,8 @@ public class Mafenetre extends JFrame{
             this.setMinimumSize(new Dimension(1000,1000));
             this.setVisible(true);
           
-        }                  
+        }     
+        public void make_success(){
+            System.out.println("Ma fenetre marche");
+        }             
 }
