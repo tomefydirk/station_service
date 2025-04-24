@@ -1,7 +1,0 @@
-package aff;
-
-import javax.swing.JPanel;
-
-public class Table extends JPanel{
-    
-}
