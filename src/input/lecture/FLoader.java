@@ -48,12 +48,15 @@ public class FLoader {
          public static String[] get_row(String input_line){
             input_line=input_line.trim();
             String[] retour=new String[4];
+          
             retour=FLoader.decomp_block(input_line,";");
-            retour[0]=FLoader.enlever(input_line, "Date :");
-            retour[1]=FLoader.enlever(input_line, "Entrée :");
-            retour[2]=FLoader.enlever(input_line, "Sortie :");
-            retour[3]=FLoader.enlever(input_line, "Cuve :");
-            //todo!!
+           
+            retour[0]=FLoader.enlever(retour[0], "Date :");
+            retour[1]=FLoader.enlever(retour[1], "Entrée :");
+            retour[2]=FLoader.enlever(retour[2], "Sortie :");
+            retour[3]=FLoader.enlever(retour[3], "Cuve :");
+         
+           // debug(retour);
             return retour;
          }
          public static void debug(String[][] a){
@@ -67,6 +70,7 @@ public class FLoader {
          }
          public static void debug(String[] a){
             for(int j=0;j<a.length;j++){
+                System.out.print("index "+j +" => ");
                 System.out.println(a[j]);
             }
          }
@@ -74,10 +78,12 @@ public class FLoader {
                 int limit=count_data(input);
                 String[][] donnee=new String[limit][];
                 String[]a=separation_par_break(input);
+               //FLoader.debug(a);
                 for(int i=0;i<limit;i++){
+
                    donnee[i]=get_row(a[i]);
                 }
-               // FLoader.debug(donnee);
+             FLoader.debug(donnee);
                 return donnee;
          }
          public static void main(String[] args){
@@ -86,6 +92,11 @@ public class FLoader {
                                 "Entrée :0;\n" + //
                                 "Sortie :0;\n" + //
                                 "Cuve :1;\n" + //
+                                "break;\n\n" + //
+                                "Date :Bogosy;\n" + //
+                                "Entrée :100;\n" + //
+                                "Sortie :10;\n" + //
+                                "Cuve :11;\n" + //
                                 "break;\n" + //
                                 "");
          }

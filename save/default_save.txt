@@ -4,3 +4,9 @@ Sortie :0;
 Cuve :1;
 break;
 
+Date :blabla;
+Entrée :0;
+Sortie :0;
+Cuve :1;
+break;
+
