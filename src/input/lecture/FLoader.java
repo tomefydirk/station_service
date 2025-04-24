@@ -9,12 +9,6 @@ public class FLoader {
         public static String enlever(String phrase,String regex){
             return phrase.replaceAll(regex,"");
         }
-        public static String piece_as_string(String value){
-            return value.replaceAll("Piece :","").trim();
-        }
-        public static String position_as_string(String value){
-            return value.replaceAll("Position :","").trim();
-        }
         //get_path<Real>{
         public static String path_saved(String a){
             String contenu="";
@@ -48,5 +42,22 @@ public class FLoader {
             return block;
          }
          // }
+         public int count_data(String input){
+            return separation_par_break(input).length;
+         }
+         public String[] get_row(String input,int line){
+            //todo!!
+            return null;
+         }
+         public String[][] get_all_data(String input){
+                int limit=count_data(input);
+                String[][] donnee=new String[limit][];
+                String[]a=separation_par_break(input);
+                for(int i=0;i<limit;i++){
+                   //todo!!
+                    
+                }
+                return donnee;
+         }
     
 }
