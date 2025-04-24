@@ -42,20 +42,35 @@ public class FLoader {
             return block;
          }
          // }
-         public int count_data(String input){
+         public static int count_data(String input){
             return separation_par_break(input).length;
          }
-         public String[] get_row(String input,int line){
+         public static String[] get_row(String input_line){
+            input_line=input_line.trim();
+            String[] retour=new String[4];
+            retour=FLoader.decomp_block(input_line,";");
+            retour[0]=FLoader.enlever(input_line, "Date :");
+            retour[1]=FLoader.enlever(input_line, "Entrée :");
+            retour[2]=FLoader.enlever(input_line, "Sortie :");
+            retour[3]=FLoader.enlever(input_line, "Cuve :");
             //todo!!
-            return null;
+            return retour;
          }
-         public String[][] get_all_data(String input){
+         public static void debug(String[][] a){
+                for(int i=0;i<a.length;i++){
+                    for(int j=0;j<a[i].length;j++){
+                        System.out.println(a[i][j]);
+                    }
+                    System.out.println("--->");
+
+                }
+         }
+         public static String[][] get_all_data(String input){
                 int limit=count_data(input);
                 String[][] donnee=new String[limit][];
                 String[]a=separation_par_break(input);
                 for(int i=0;i<limit;i++){
-                   //todo!!
-                    
+                   donnee[i]=get_row(a[i]);
                 }
                 return donnee;
          }
