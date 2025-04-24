@@ -1,5 +1,6 @@
 package aff;
 
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -32,6 +33,7 @@ public class Formulaire extends JPanel{
                 this.add(B);
         }    
         void init_text_field(){
+                A.setLayout(new GridLayout(4,0));
                 Date=new JTextField(10);
                 make_text_field("Date", Date);
 
@@ -44,12 +46,16 @@ public class Formulaire extends JPanel{
 
                 cuve=new JTextField(10);
                 make_text_field("Cuve", cuve);
+        }
+        void init_bouton(){
+                B.add(new JButton("Save"));
         }   
         public Formulaire(){
                    super(); 
                  
                    init_panel(); 
                    init_text_field();
+                   init_bouton();
                    init_layout();
 
 
