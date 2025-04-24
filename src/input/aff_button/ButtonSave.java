@@ -12,6 +12,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import aff.Formulaire;
+
 public class ButtonSave extends JButton{
     String val="";
     void make_success(){
@@ -45,14 +47,17 @@ public class ButtonSave extends JButton{
     void add_break(){
         val+="break;\n\n";
     }
-    public ButtonSave(HashMap<String,String> input,JTextField path){
+    public ButtonSave(Formulaire f,JTextField path){
         super("Save 💾");
         addActionListener(_->{
+            HashMap<String,String> input=f.field_into_string();
             val="";
             val+=init_field("Date",input.get("Date"));
             val+=init_field("Entrée",input.get("Entrée"));
             val+=init_field("Sortie",input.get("Sortie"));
             val+=init_field("Cuve",input.get("Cuve"));
+            add_break();
+            System.out.println(val);
             try (BufferedWriter writer = new BufferedWriter(new FileWriter("/home/tomefy/Documents/prog/java/station_service/save/"+path.getText()+".txt"))) {
             writer.append(val);
             } catch (IOException e) {

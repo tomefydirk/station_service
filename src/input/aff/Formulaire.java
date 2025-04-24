@@ -55,14 +55,15 @@ public class Formulaire extends JPanel{
         void init_bouton(){
                 JTextField a=new JTextField("default_save",10);
                 B.add(a);
-                B.add(new ButtonSave(field_into_string(), a));
+                B.add(new ButtonSave(this, a));
         }   
-        HashMap <String,String> field_into_string(){
+        public  HashMap <String,String> field_into_string(){
                 HashMap<String,String>  retour=new HashMap<>();  
                 retour.put("Date",date.getText());
                 retour.put("Entrée",entree.getText());
                 retour.put("Sortie",sortie.getText());
                 retour.put("Cuve", cuve.getText());
+                System.out.println(retour.size());
                 return retour;
         }
         public Formulaire(){
