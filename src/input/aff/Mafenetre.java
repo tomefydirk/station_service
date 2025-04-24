@@ -4,17 +4,10 @@ import java.awt.GridLayout;
 
 import javax.swing.*;
 public class Mafenetre extends JFrame{ 
+    MaTable mt;
         void add_table(){
-            String[][] donnee={
-                {"1","Gerard","bleu"},
-                {"2","Claude","bleu"}
-            };
-            String[] colone={
-                "id","nom","couleur"
-            };
-            JTable tableau=new JTable(donnee,colone);
-            JScrollPane sp=new JScrollPane(tableau);
-            add(sp);
+            mt=new MaTable();
+            mt.repaint();
         }
         
         public Mafenetre(){
