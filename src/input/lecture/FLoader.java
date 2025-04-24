@@ -88,7 +88,7 @@ public class FLoader {
          }
          public static void main(String[] args){
             System.out.println("\n");
-            String [][] a=get_all_data("Date :blabla;\n" + //
+          /*   String [][] a=get_all_data("Date :blabla;\n" + //
                                 "Entrée :0;\n" + //
                                 "Sortie :0;\n" + //
                                 "Cuve :1;\n" + //
@@ -98,6 +98,7 @@ public class FLoader {
                                 "Sortie :10;\n" + //
                                 "Cuve :11;\n" + //
                                 "break;\n" + //
-                                "");
+                                "");*/
+        
          }
 }
