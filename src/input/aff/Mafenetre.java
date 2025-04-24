@@ -6,8 +6,17 @@ import javax.swing.*;
 public class Mafenetre extends JFrame{ 
     MaTable mt;
         void add_table(){
-            mt=new MaTable();
-            mt.repaint();
+            String[][] donnee={
+                {"1","Gerard","rose"},
+                {"2","Claude","bleu"},
+                {"3","Tony","bleu"},
+            };
+            String[] colone={
+                "id","nom","couleur"
+            };
+          
+            mt=new MaTable(donnee,colone);
+            add(mt);
         }
         
         public Mafenetre(){
