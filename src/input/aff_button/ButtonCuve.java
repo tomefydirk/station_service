@@ -26,7 +26,7 @@ public class ButtonCuve extends JButton{
                   String[][]donne=FLoader.get_all_data(FLoader.path_saved(a.getText()));
                   int taille=s.get_taille_lc();
                   System.out.println(taille);
-                  String [][] s_by_cuve=FLoader.get_data_by_cuve(donne,s.getLc(),taille);
+                  String [][] s_by_cuve=FLoader.get_data_by_cuve(donne,s.getLc(),3);
                   afficher_donnee(s_by_cuve);
             });
         }

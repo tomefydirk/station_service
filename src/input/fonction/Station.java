@@ -16,6 +16,7 @@ public class Station {
         if(lc[i]==null){
             return i;
         }
+        i++;
        }
     }
 }
