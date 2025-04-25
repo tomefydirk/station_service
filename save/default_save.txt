@@ -4,3 +4,8 @@ Sortie :100;
 Cuve :A;
 break;
 
+Date :11/13/10;
+Entrée :300;
+Sortie :400;
+Cuve :B;
+break;

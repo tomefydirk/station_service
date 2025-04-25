@@ -8,7 +8,7 @@ import aff.Formulaire;
 import aff.MaTable;
 import lecture.FLoader;
 
-public class ButtonUppload_V1 extends JButton{
+public class ButtonCount extends JButton{
     String path;
     public void afficher_donnee(String[][]donnee){
             String[] colone={
@@ -19,7 +19,7 @@ public class ButtonUppload_V1 extends JButton{
         JOptionPane.showMessageDialog(null, mt, "Enregistré", JOptionPane.NO_OPTION);
     }
   
-    public ButtonUppload_V1(Formulaire f,JTextField a){
+    public ButtonCount(Formulaire f,JTextField a){
         super("Voir les comptes 📥");
 
         addActionListener(_->{
