@@ -3,6 +3,9 @@ package lecture;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.HashMap;
+
+import fonction.Cuve;
 
 public class FLoader {
      //-where return::String{
@@ -92,6 +95,21 @@ public class FLoader {
                 }
              FLoader.debug(donnee);
                 return donnee;
+         }
+         public static int get_somme_entree(String cuve_name,String[][] donnee){
+            int retour=0;
+            for(int i=0;i<donnee.length;i++){
+                if(donnee[i][0].equalsIgnoreCase(cuve_name)){
+                        retour+=Integer.parseInt(donnee[i][2]);
+                }
+            }
+            return 0;
+         }
+         pu
+         public static String[][] get_data_by_cuve(String[][] donnee,Cuve[] lc,int taille){
+            String[][] retour=new String[taille][4];
+            
+            return donnee;
          }
          public static void main(String[] args){
             System.out.println("\n");
