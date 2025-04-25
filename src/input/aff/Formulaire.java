@@ -55,8 +55,8 @@ public class Formulaire extends JPanel{
                 make_text_field("Cuve", cuve);
         }
 
-        void init_bouton(){
-                B=new B_panel(this,s);
+        void init_bouton(String file){
+                B=new B_panel(this,file);
         }   
         public  HashMap <String,String> field_into_string(){
                 HashMap<String,String>  retour=new HashMap<>();  
@@ -67,12 +67,11 @@ public class Formulaire extends JPanel{
                 System.out.println(retour.size());
                 return retour;
         }
-        public Formulaire(Station s){
+        public Formulaire(String file){
                    super(); 
-                   this.s=s;
                    init_panel(); 
                    init_text_field();
-                   init_bouton();
+                   init_bouton(file);
                    init_layout();
 
 

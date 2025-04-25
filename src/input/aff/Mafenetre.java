@@ -19,12 +19,12 @@ public class Mafenetre extends JFrame{
             p.add(label);
             add(p);
         }
-        public Mafenetre(Station s){
+        public Mafenetre(String file){
             super("Station service");
             
             this.setLayout(new GridLayout(0, 2));
             //setBackground(new Color(59,59, 59,10));
-            add(new Formulaire(s));
+            add(new Formulaire(file));
             make_image();
             this.setLocationRelativeTo(null);
             this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

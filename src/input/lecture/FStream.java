@@ -43,8 +43,10 @@ public class FStream {
 
             cuve.setCarb(carburant) ;
             cuves.add(cuve);
+           
         }
-
+        //pour connaitre la taille
+        cuves.add(null);
         station.setLc( cuves.toArray(new Cuve[0])) ;
         return station;
 

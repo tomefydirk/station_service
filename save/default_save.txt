@@ -21,3 +21,9 @@ Entrée :11;
 Sortie :1;
 Cuve :C;
 break;
+Date :12-31-17;
+Entrée :10;
+Sortie :10;
+Cuve :D;
+break;
+
