@@ -60,7 +60,7 @@ public class ButtonSave extends JButton{
             val+=init_field("Cuve",input.get("Cuve"));
             add_break();
             System.out.println(val);
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter("/home/tomefy/Documents/prog/java/station_service/save/"+path.getText()+".txt"))) {
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter("/home/tomefy/Documents/prog/java/station_service/save/"+path.getText()+".txt",true))) {
             writer.append(val);
             } catch (IOException e) {
             System.err.println("Erreur lors de la sauvegarde du fichier : " + e.getMessage());

@@ -3,11 +3,27 @@ package aff_button;
 
 
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+import aff.MaTable;
+import lecture.FLoader;
+
 public class ButtonCuve extends JButton{
+    public void afficher_donnee(String[][]donnee){
+            String[] colone={
+                "Cuve","Entrée","Sortie","Reste"
+            };
+          
+           MaTable mt=new MaTable(donnee,colone);
+        JOptionPane.showMessageDialog(null, mt, "Situation par cuve", JOptionPane.NO_OPTION);
+    }
         public ButtonCuve(JTextField a){
             super("situation par cuve");
             StyleButton.ajust_color(this);
+            addActionListener(_->{
+                  String[][]donne=FLoader.get_all_data(FLoader.path_saved(a.getText()));
+                  afficher_donnee(donne);
+            });
         }
 }

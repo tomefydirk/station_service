@@ -1,6 +1,18 @@
-Date :12/12/2012;
-Entrée :12;
-Sortie :100;
-Cuve :A;
+Date :;
+Entrée :0;
+Sortie :0;
+Cuve :;
+break;
+
+Date :1;
+Entrée :1;
+Sortie :0;
+Cuve :12;
+break;
+
+Date :12-3-4;
+Entrée :11;
+Sortie :01;
+Cuve :B;
 break;
 

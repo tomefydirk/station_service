@@ -11,7 +11,7 @@ import aff.MaTable;
 import lecture.FLoader;
 
 public class ButtonCount extends JButton{
-    String path;
+
     public void afficher_donnee(String[][]donnee){
             String[] colone={
                 "Cuve","Date","Entrée","Sortie"
