@@ -6,7 +6,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import aff_util.B_panel;
-
+import fonction.Station;
 
 import java.awt.*;
 import java.util.HashMap;
@@ -21,6 +21,7 @@ public class Formulaire extends JPanel{
         JPanel A;
         JPanel B;
         /*-------------*/
+        Station s;
         void make_text_field(String s,JTextField t){
 
                 JPanel p=new JPanel();
@@ -55,7 +56,7 @@ public class Formulaire extends JPanel{
         }
 
         void init_bouton(){
-                B=new B_panel(this);
+                B=new B_panel(this,s);
         }   
         public  HashMap <String,String> field_into_string(){
                 HashMap<String,String>  retour=new HashMap<>();  
@@ -66,9 +67,9 @@ public class Formulaire extends JPanel{
                 System.out.println(retour.size());
                 return retour;
         }
-        public Formulaire(){
+        public Formulaire(Station s){
                    super(); 
-
+                   this.s=s;
                    init_panel(); 
                    init_text_field();
                    init_bouton();

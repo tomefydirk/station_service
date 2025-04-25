@@ -6,4 +6,8 @@ public class Station {
     public Cuve[] getLc() {
         return lc;
     }
+    public Station(String name,Cuve[] lc){
+        nom=name;
+        this.lc=lc;
+    }
 }

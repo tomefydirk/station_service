@@ -5,6 +5,8 @@ import java.awt.GridLayout;
 
 import javax.swing.*;
 
+import fonction.Station;
+
 public class Mafenetre extends JFrame{ 
   
         void make_image(){
@@ -17,12 +19,12 @@ public class Mafenetre extends JFrame{
             p.add(label);
             add(p);
         }
-        public Mafenetre(){
+        public Mafenetre(Station s){
             super("Station service");
             
             this.setLayout(new GridLayout(0, 2));
             //setBackground(new Color(59,59, 59,10));
-            add(new Formulaire());
+            add(new Formulaire(s));
             make_image();
             this.setLocationRelativeTo(null);
             this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
