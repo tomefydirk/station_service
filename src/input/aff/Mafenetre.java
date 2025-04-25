@@ -1,4 +1,5 @@
 package aff;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 
@@ -7,12 +8,14 @@ public class Mafenetre extends JFrame{
   
         void make_image(){
             JPanel p=new JPanel();
-            p.setLayout(new GridLayout(2, 0));
-            ImageIcon imageIcon = new ImageIcon(getClass().getResource("/img/station_service.png"));
+          
+            ImageIcon imageIcon = new ImageIcon(getClass().getResource("/img/blabla2.png"));
 
-           
+          
             JLabel label = new JLabel(imageIcon);
+            p.setBackground(new Color(0,0, 0));
             p.add(label);
+         
             add(p);
         }
         public Mafenetre(){
