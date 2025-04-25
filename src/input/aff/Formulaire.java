@@ -1,12 +1,16 @@
 package aff;
 
 
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import aff_button.ButtonSave;
+import aff_util.B_panel;
 import aff_button.ButtonCount;
+import aff_button.ButtonCuve;
+import aff_button.ButtonFinance;
 
 import java.awt.*;
 import java.util.HashMap;
@@ -31,7 +35,7 @@ public class Formulaire extends JPanel{
         }
         void init_panel(){
                 A=new JPanel();
-                B=new JPanel();
+              //  B=new JPanel();
         }
         void init_layout(){
                 this.setLayout(new GridLayout(2, 0));
@@ -53,14 +57,9 @@ public class Formulaire extends JPanel{
                 cuve=new JTextField(10);
                 make_text_field("Cuve", cuve);
         }
-        void init_bouton(){
-                JTextField a=new JTextField("default_save",10);
-                B.add(a);
-                B.add(new ButtonSave(this, a));
 
-                JLabel space=new JLabel(" ou alors ");
-                B.add(space);
-                B.add(new ButtonCount(a));
+        void init_bouton(){
+                B=new B_panel(this);
         }   
         public  HashMap <String,String> field_into_string(){
                 HashMap<String,String>  retour=new HashMap<>();  
@@ -73,7 +72,6 @@ public class Formulaire extends JPanel{
         }
         public Formulaire(){
                    super(); 
-                 
                    init_panel(); 
                    init_text_field();
                    init_bouton();
