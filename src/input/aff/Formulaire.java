@@ -38,7 +38,7 @@ public class Formulaire extends JPanel{
               //  B=new JPanel();
         }
         void init_layout(){
-                this.setLayout(new GridLayout(2, 0));
+                this.setLayout(new GridLayout(0, 2));
                 this.add(A);
                 this.add(B);
         }    
@@ -72,6 +72,7 @@ public class Formulaire extends JPanel{
         }
         public Formulaire(){
                    super(); 
+
                    init_panel(); 
                    init_text_field();
                    init_bouton();
