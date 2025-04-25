@@ -14,10 +14,11 @@ import aff_button.ButtonFinance;
 import aff_button.ButtonSave;
 
 public class B_panel extends JPanel{
-    void make_bouton(JButton b){
+    public static JPanel make_bouton(JButton b){
         JPanel p=new JPanel();
         p.add(b);
-        add(p);
+        return p;
+     
     }
     void make_text_field(JTextField a){
         
@@ -32,17 +33,21 @@ public class B_panel extends JPanel{
         p.add(l);
         add(p);
     }
+    void make_all_bouton(Formulaire f,JTextField a){
+        JPanel p=new JPanel();
+        p.setLayout(new GridLayout(4, 0));
+        p.add(make_bouton(new ButtonSave(f,a)));
+        p.add(make_bouton(new ButtonCount(a)));
+        p.add(make_bouton(new ButtonCuve(a)));
+        p.add(make_bouton(new ButtonFinance(a)));
+        add(p);
+    }
     public B_panel(Formulaire f){
         super();
         setLayout(new GridLayout(6, 1));
         JTextField a=new JTextField("default_save",10);    
         make_text_field(a);
         make_label(new JLabel("Choix possible :"));
-        make_bouton(new ButtonSave(f,a));
-        make_bouton(new ButtonCount(a));
-              
-        make_bouton(new ButtonCuve(a));
-               
-        make_bouton(new ButtonFinance(a));
+        make_all_bouton(f, a);
     }
 }
