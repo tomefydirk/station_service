@@ -103,13 +103,29 @@ public class FLoader {
                         retour+=Integer.parseInt(donnee[i][2]);
                 }
             }
-            return 0;
+            return retour;
          }
-         pu
+         public static int get_somme_sortie(String cuve_name,String[][] donnee){
+            int retour=0;
+            for(int i=0;i<donnee.length;i++){
+                if(donnee[i][0].equalsIgnoreCase(cuve_name)){
+                        retour+=Integer.parseInt(donnee[i][3]);
+                }
+            }
+            return retour;
+         }
+         public static int get_reste(String cuve_name,String[][] donnee){
+            return get_somme_entree(cuve_name, donnee)-get_somme_sortie(cuve_name, donnee);
+         }
          public static String[][] get_data_by_cuve(String[][] donnee,Cuve[] lc,int taille){
             String[][] retour=new String[taille][4];
-            
-            return donnee;
+            for(int i=0;i<taille;i++){
+                retour[i][0]=lc[i].getNom();
+                retour[i][1]=""+get_somme_entree(lc[i].getNom(), donnee);
+                retour[i][2]=""+get_somme_sortie(lc[i].getNom(), donnee);
+                retour[i][3]=""+get_reste(lc[i].getNom(), donnee)
+            }
+            return retour;
          }
          public static void main(String[] args){
             System.out.println("\n");
