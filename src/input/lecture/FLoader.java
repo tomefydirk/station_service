@@ -123,7 +123,7 @@ public class FLoader {
                 retour[i][0]=lc[i].getNom();
                 retour[i][1]=""+get_somme_entree(lc[i].getNom(), donnee);
                 retour[i][2]=""+get_somme_sortie(lc[i].getNom(), donnee);
-                retour[i][3]=""+get_reste(lc[i].getNom(), donnee)
+                retour[i][3]=""+get_reste(lc[i].getNom(), donnee);
             }
             return retour;
          }
