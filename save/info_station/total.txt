@@ -1,0 +1,5 @@
+Station:Total
+Cuves:
+cuve1,10000,Diesel,1200,1050
+cuve2,5000,SP95,1250,1100
+cuve3,8000,SP98,1300,1150

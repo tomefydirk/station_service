@@ -3,6 +3,7 @@ package lecture;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,4 +53,20 @@ public class FStream {
         return null;
     }
 }
+    public static void saveStationToFile(Station station, String filePath) {
+    try (PrintWriter pw = new PrintWriter(filePath)) {
+        pw.println("Station:" + station.getNom());
+        pw.println("Cuves:");
+        for (Cuve c : station.getLc()) {
+            pw.println(c.getNom() + "," + c.getCapacite() + "," +
+                       c.getCarb().getNom() + "," + c.getCarb().getpA() + "," + c.getCarb().getPV());
+        }
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+    public static void main(String[] args) {
+        Station f=from_data("/home/tomefy/Documents/prog/java/station_service/save/info_station/total.txt");
+        saveStationToFile(f,"/home/tomefy/Documents/prog/java/station_service/save/info_station/total2.txt" );
+    }
 }
