@@ -24,7 +24,7 @@ public class FLoader {
         }
         // }
     //}
-
+    
     //-where return::String[]{
         public static String[] decomp_block(String phrase,String regex){
             String[] s=phrase.split(regex);
@@ -47,15 +47,22 @@ public class FLoader {
          }
          public static String[] get_row(String input_line){
             input_line=input_line.trim();
-            String[] retour=new String[4];
+            String[] perm=new String[4];
           
-            retour=FLoader.decomp_block(input_line,";");
+            perm=FLoader.decomp_block(input_line,";");
            
-            retour[0]=FLoader.enlever(retour[0], "Date :");
-            retour[1]=FLoader.enlever(retour[1], "Entrée :");
-            retour[2]=FLoader.enlever(retour[2], "Sortie :");
-            retour[3]=FLoader.enlever(retour[3], "Cuve :");
+            perm[0]=FLoader.enlever(perm[0], "Date :");
+            perm[1]=FLoader.enlever(perm[1], "Entrée :");
+            perm[2]=FLoader.enlever(perm[2], "Sortie :");
+            perm[3]=FLoader.enlever(perm[3], "Cuve :");
          
+
+            /*---arrangement de l'affichage--*/
+            String[] retour=new String[4];
+            retour[0]=perm[3];
+            retour[1]=perm[0];
+            retour[2]=perm[1];
+            retour[3]=perm[2];
            // debug(retour);
             return retour;
          }

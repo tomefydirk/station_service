@@ -1,12 +1,6 @@
-Date :blabla;
-Entrée :0;
-Sortie :0;
-Cuve :1;
-break;
-
-Date :blabla;
-Entrée :0;
-Sortie :0;
-Cuve :1;
+Date :12/12/10;
+Entrée :200;
+Sortie :100;
+Cuve :A;
 break;
 

@@ -9,12 +9,12 @@ public class MaTable extends JPanel{
    public void setT(JTable t) {
         this.t = t;
     }
-   MaTable(String[][] donnee,String[] colone){
+   public MaTable(String[][] donnee,String[] colone){
             t=new JTable(donnee,colone);
             JScrollPane sp=new JScrollPane(t);
             add(sp);
    }
-   MaTable(){
+  public MaTable(){
           JScrollPane sp=new JScrollPane(t);
           add(sp);
    }
