@@ -10,4 +10,12 @@ public class Station {
         nom=name;
         this.lc=lc;
     }
+    public int get_taille_lc(){
+        int i=0;
+       while (true) {
+        if(lc[i]==null){
+            return i;
+        }
+       }
+    }
 }

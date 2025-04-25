@@ -1,12 +1,23 @@
 Date :1;
 Entrée :1;
 Sortie :0;
-Cuve :12;
+Cuve :A;
 break;
 
 Date :12-3-4;
 Entrée :11;
-Sortie :01;
+Sortie :1;
 Cuve :B;
 break;
 
+Date :12-3-4;
+Entrée :11;
+Sortie :2;
+Cuve :B;
+break;
+
+Date :12-3-4;
+Entrée :11;
+Sortie :1;
+Cuve :C;
+break;
