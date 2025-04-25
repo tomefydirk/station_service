@@ -1,10 +1,10 @@
 package aff;
-import java.awt.Color;
+
 import java.awt.Dimension;
 import java.awt.GridLayout;
 
 import javax.swing.*;
-import javax.swing.border.Border;
+
 public class Mafenetre extends JFrame{ 
   
         void make_image(){
