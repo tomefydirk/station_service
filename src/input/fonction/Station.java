@@ -28,7 +28,32 @@ public class Station {
         i++;
        }
     }
+    public Carburant get_carburant(String cuve_name){
+        int limit=get_taille_lc();
+        for(int i=0;i<limit;i++){
+            if(lc[i].getNom().equalsIgnoreCase(cuve_name)){
+                    return lc[i].getCarb();
+            }
+        }
+        return null;
+    }
+    public int get_pA(String cuve_name){
+        Carburant c=get_carburant(cuve_name);
+        if(c==null){
+            return 0;
+        }else{
+            return c.pA;
+        }
+    }
+    public int get_pV(String cuve_name){
+        Carburant c=get_carburant(cuve_name);
+        if(c==null){
+            return 0;
+        }else{
+            return c.pV;
+        }
+    }
     public Station(){
-        
+
     }
 }

@@ -39,7 +39,7 @@ public class FStream {
             Carburant carburant = new Carburant();
             carburant.setNom( parts[2]) ;
             carburant.setpA( Integer.parseInt(parts[3]));
-            carburant.setPV( Integer.parseInt(parts[4]));
+            carburant.setpV( Integer.parseInt(parts[4]));
 
             cuve.setCarb(carburant) ;
             cuves.add(cuve);
@@ -59,7 +59,7 @@ public class FStream {
         pw.println("Cuves:");
         for (Cuve c : station.getLc()) {
             pw.println(c.getNom() + "," + c.getCapacite() + "," +
-                       c.getCarb().getNom() + "," + c.getCarb().getpA() + "," + c.getCarb().getPV());
+                       c.getCarb().getNom() + "," + c.getCarb().getpA() + "," + c.getCarb().getpV());
         }
     } catch (IOException e) {
         e.printStackTrace();

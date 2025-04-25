@@ -15,11 +15,11 @@ public class Carburant {
     public void setpA(int pA) {
         this.pA = pA;
     }
-    int PV;
-    public int getPV() {
-        return PV;
+    int pV;
+    public int getpV() {
+        return pV;
     }
-    public void setPV(int pV) {
-        PV = pV;
+    public void setpV(int pV) {
+        this.pV = pV;
     }
 }
