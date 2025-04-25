@@ -47,7 +47,6 @@ public class B_panel extends JPanel{
         setLayout(new GridLayout(6, 1));
         JTextField a=new JTextField("default_save",10);    
         make_text_field(a);
-        make_label(new JLabel("Choix possible :"));
         make_all_bouton(f, a);
     }
 }

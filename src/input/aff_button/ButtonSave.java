@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
+import java.awt.Color;
 import java.awt.FlowLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -49,6 +50,7 @@ public class ButtonSave extends JButton{
     }
     public ButtonSave(Formulaire f,JTextField path){
         super("Save 💾");
+        setBackground(new Color(240, 0, 0));
         addActionListener(_->{
             HashMap<String,String> input=f.field_into_string();
             val="";
