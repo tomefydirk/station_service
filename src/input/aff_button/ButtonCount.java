@@ -4,7 +4,7 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-import aff.Formulaire;
+
 import aff.MaTable;
 import lecture.FLoader;
 
@@ -19,11 +19,10 @@ public class ButtonCount extends JButton{
         JOptionPane.showMessageDialog(null, mt, "Enregistré", JOptionPane.NO_OPTION);
     }
   
-    public ButtonCount(Formulaire f,JTextField a){
+    public ButtonCount(JTextField a){
         super("Voir les comptes 📥");
 
         addActionListener(_->{
-            String path=FLoader.path_saved(a.getText());
             String[][]donne=FLoader.get_all_data(FLoader.path_saved(a.getText()));
             afficher_donnee(donne);
         });

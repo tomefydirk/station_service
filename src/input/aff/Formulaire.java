@@ -6,7 +6,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import aff_button.ButtonSave;
-import aff_button.ButtonUppload_V1;
+import aff_button.ButtonCount;
 
 import java.awt.*;
 import java.util.HashMap;
@@ -60,7 +60,7 @@ public class Formulaire extends JPanel{
 
                 JLabel space=new JLabel(" ou alors ");
                 B.add(space);
-                B.add(new ButtonUppload_V1(this,a));
+                B.add(new ButtonCount(a));
         }   
         public  HashMap <String,String> field_into_string(){
                 HashMap<String,String>  retour=new HashMap<>();  
