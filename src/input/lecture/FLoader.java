@@ -126,6 +126,26 @@ public class FLoader {
             }
             return retour;
          }
+         public static String[][] get_data_finance(String[][] donnee,Cuve[] lc,int taille){
+            String[][] perm=get_data_by_cuve(donnee, lc, taille);
+            String[][] retour=new String[taille][4];
+            for(int i=0;i<taille;i++){
+                retour[i][0]=perm[i][0];
+                
+                //---sortie et benef
+                int a=Integer.parseInt(perm[i][2])*lc[i].getCarb().getpA();
+                int s=Integer.parseInt(perm[i][2])*lc[i].getCarb().getpV();//sortie
+                int b=s-a;//benef
+                //---
+
+                //--entree
+                int e=Integer.parseInt(perm[i][1])*lc[i].getCarb().getpA();
+                retour[i][1]=""+e;
+                retour[i][2]=""+s;
+                retour[i][3]=""+b;
+            }
+            return retour;
+         }
          public static void main(String[] args){
             System.out.println("\n");
           /*   String [][] a=get_all_data("Date :blabla;\n" + //
