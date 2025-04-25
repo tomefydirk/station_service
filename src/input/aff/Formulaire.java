@@ -1,16 +1,12 @@
 package aff;
 
 
-import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import aff_button.ButtonSave;
 import aff_util.B_panel;
-import aff_button.ButtonCount;
-import aff_button.ButtonCuve;
-import aff_button.ButtonFinance;
+
 
 import java.awt.*;
 import java.util.HashMap;

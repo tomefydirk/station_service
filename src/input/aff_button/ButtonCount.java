@@ -1,6 +1,6 @@
 package aff_button;
 
-import java.awt.Color;
+
 
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
@@ -23,7 +23,7 @@ public class ButtonCount extends JButton{
   
     public ButtonCount(JTextField a){
         super("Voir les comptes 📥");
-        setBackground(new Color(240, 0, 0));
+        StyleButton.ajust_color(this);
         addActionListener(_->{
             String[][]donne=FLoader.get_all_data(FLoader.path_saved(a.getText()));
             afficher_donnee(donne);
