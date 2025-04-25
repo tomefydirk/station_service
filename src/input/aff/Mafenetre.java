@@ -26,7 +26,7 @@ public class Mafenetre extends JFrame{
             make_image();
             this.setLocationRelativeTo(null);
             this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            this.setMinimumSize(new Dimension(1920,1080));
+            this.setMinimumSize(new Dimension(1920,1000));
             this.setVisible(true);
           
         }     
