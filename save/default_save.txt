@@ -1,9 +1,3 @@
-Date :;
-Entrée :0;
-Sortie :0;
-Cuve :;
-break;
-
 Date :1;
 Entrée :1;
 Sortie :0;

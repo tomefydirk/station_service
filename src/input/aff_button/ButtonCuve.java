@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import aff.MaTable;
+import fonction.Station;
 import lecture.FLoader;
 
 public class ButtonCuve extends JButton{
@@ -18,7 +19,7 @@ public class ButtonCuve extends JButton{
            MaTable mt=new MaTable(donnee,colone);
         JOptionPane.showMessageDialog(null, mt, "Situation par cuve", JOptionPane.NO_OPTION);
     }
-        public ButtonCuve(JTextField a){
+        public ButtonCuve(JTextField a,Station s){
             super("situation par cuve");
             StyleButton.ajust_color(this);
             addActionListener(_->{
