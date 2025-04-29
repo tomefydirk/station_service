@@ -25,12 +25,15 @@ public class ButtonFinance extends JButton{
         super("situation financière");
         StyleButton.ajust_color(this);
         addActionListener(_->{
+            String path=main.Main.mvt_path(a.getText());
+            System.out.println(path);
+            if(FLoader.make_condition_parsing(path)){
               String[][]donne=FLoader.get_all_data(FLoader.path_saved(a.getText()));
               Station s=FStream.from_data(Main.file_path(file));
               int taille=s.get_taille_lc();
               System.out.println(taille);
               String [][] s_by_cuve=FLoader.get_data_finance(donne,s.getLc(),taille);
-              afficher_donnee(s_by_cuve);
+              afficher_donnee(s_by_cuve);}
         });
     }
 }
