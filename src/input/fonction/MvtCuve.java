@@ -52,8 +52,12 @@ public class MvtCuve {
         retour.entree=Integer.parseInt(row[3]);
         return retour;
     }
-  /*  public static Mvt_cuve[] from_donnee(String input){
+  /*  public static Mvt_cuve[] from_donnee(String input,Station s){
+        Mvt_cuve retour=new Mvt_cuve[donne.length];
         String[][] donne=FLoader.get_all_data(input);
-        
+        for(int i=0;i<donne.length;i++){
+            retour[i]=from_row(donnee[i],s);
+        }   
+            return retour;
     } */
 }
