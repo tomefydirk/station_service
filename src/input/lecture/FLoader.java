@@ -37,7 +37,7 @@ public class FLoader {
     public static String path_saved(String a) {
         String contenu = "";
         try {
-            contenu = Files.readString(Path.of("/home/tomefy/Documents/prog/java/station_service/save/" + a + ".txt"));
+            contenu = Files.readString(Path.of(main.Main.mvt_path(a)));
             // System.out.println(contenu);
             return contenu;
         } catch (IOException e) {
