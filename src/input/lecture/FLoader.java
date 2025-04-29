@@ -44,7 +44,7 @@ public class FLoader {
             e.printStackTrace();
         }
 
-        return "/home/tomefy/Documents/prog/java/station_service/save/default_save.txt";
+        return contenu;
     }
     // }
     // }

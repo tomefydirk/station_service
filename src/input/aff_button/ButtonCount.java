@@ -25,8 +25,13 @@ public class ButtonCount extends JButton{
         super("Voir les comptes 📥");
         StyleButton.ajust_color(this);
         addActionListener(_->{
-            String[][]donne=FLoader.get_all_data(FLoader.path_saved(a.getText()));
-            afficher_donnee(donne);
+            String path=main.Main.mvt_path(a.getText());
+            System.out.println(path);
+            if(FLoader.make_condition_parsing(path)){
+                String[][]donne=FLoader.get_all_data(FLoader.path_saved(a.getText()));
+                afficher_donnee(donne);      
+            }
+          
         });
     }
 }
