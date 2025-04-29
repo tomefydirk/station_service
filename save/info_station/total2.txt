@@ -1,14 +1,10 @@
-Station: Total
-
+Station:Total
 break;
-
 Carburant:
-Diesel, 1200,1050
+Diesel,1200,1050
 SP95,1250,1100
 SP98,1300,1150
-
 break;
-
 Cuves:
 A,10000,Diesel
 B,5000,SP95
