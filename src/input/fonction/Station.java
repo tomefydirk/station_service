@@ -37,6 +37,15 @@ public class Station {
         }
         return null;
     }
+    public Cuve get_cuve(String cuve_name){
+        int limit=get_taille_lc();
+        for(int i=0;i<limit;i++){
+            if(lc[i].getNom().equalsIgnoreCase(cuve_name)){
+                    return lc[i];
+            }
+        }
+        return null;
+    }
     public int get_pA(String cuve_name){
         Carburant c=get_carburant(cuve_name);
         if(c==null){
