@@ -87,10 +87,10 @@ public class FLoader {
 
         /*---arrangement de l'affichage--*/
         String[] retour = new String[4];
-        retour[0] = perm[3];
-        retour[1] = perm[0];
-        retour[2] = perm[1];
-        retour[3] = perm[2];
+        retour[0] = perm[3];//cuve
+        retour[1] = perm[0];//date
+        retour[2] = perm[1];//entrée
+        retour[3] = perm[2];//sortie
         // debug(retour);
         return retour;
     }
