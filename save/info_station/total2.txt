@@ -1,9 +1,9 @@
 Station:Total
 break;
 Carburant:
-Diesel,1200,1050
-SP95,1250,1100
-SP98,1300,1150
+Diesel,1050,1200
+SP95,1100,1250
+SP98,1150,1300
 break;
 Cuves:
 A,10000,Diesel

@@ -50,9 +50,11 @@ public class FLoader {
          public static String[] get_row(String input_line){
             input_line=input_line.trim();
             String[] perm=new String[4];
-          
+            
             perm=FLoader.decomp_block(input_line,";");
-           
+            if(perm.length==1){
+                return null;
+            }
             perm[0]=FLoader.enlever(perm[0], "Date :");
             perm[1]=FLoader.enlever(perm[1], "Entrée :");
             perm[2]=FLoader.enlever(perm[2], "Sortie :");
@@ -69,8 +71,8 @@ public class FLoader {
             return retour;
          }
          public static void debug(String[][] a){
-                for(int i=0;i<a.length;i++){
-                    for(int j=0;j<a[i].length;j++){
+                for(int i=0;i<a.length || a[i]!=null;i++){
+                    for(int j=0;j<a[i].length || a[j]!=null;j++){
                         System.out.println(a[i][j]);
                     }
                     System.out.println("--->");
@@ -78,7 +80,7 @@ public class FLoader {
                 }
          }
          public static void debug(String[] a){
-            for(int j=0;j<a.length;j++){
+            for(int j=0;j<a.length || a[j]!=null;j++){
                 System.out.print("index "+j +" => ");
                 System.out.println(a[j]);
             }

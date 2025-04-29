@@ -110,7 +110,7 @@ public class FStream {
                 cuve.setCarb(carburantAssocie);
                 cuves.add(cuve);
             }
-    
+            cuves.add(null);
             station.setLc(cuves.toArray(new Cuve[0]));
             return station;
     
